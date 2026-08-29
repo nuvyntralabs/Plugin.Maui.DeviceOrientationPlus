@@ -44,11 +44,24 @@ sealed class DeviceOrientationImplementation : IDeviceOrientation
         }
 
         started = true;
+        platform.OrientationChanged -= OnPlatformOrientationChanged;
+        platform.OrientationChanged += OnPlatformOrientationChanged;
         SyncPlatformOptions();
         platform.Start();
         DeviceDisplay.MainDisplayInfoChanged += OnDisplayInfoChanged;
         lastCurrent = platform.GetCurrent();
         platform.Apply(Locked);
+    }
+
+    public void Stop()
+    {
+        if (!started)
+            return;
+
+        started = false;
+        DeviceDisplay.MainDisplayInfoChanged -= OnDisplayInfoChanged;
+        platform.OrientationChanged -= OnPlatformOrientationChanged;
+        platform.Stop();
     }
 
     public void Lock(ScreenOrientation orientation)
@@ -243,10 +256,21 @@ sealed class DeviceOrientationImplementation : IDeviceOrientation
             page.Disappearing += OnDisappearing;
         }
 
-        async void OnAppearing(object? sender, EventArgs e)
+        void OnAppearing(object? sender, EventArgs e)
         {
             applied = true;
-            await owner.SetAsync(orientation);
+            _ = SetSafeAsync();
+        }
+
+        async Task SetSafeAsync()
+        {
+            try
+            {
+                await owner.SetAsync(orientation).ConfigureAwait(true);
+            }
+            catch (Exception)
+            {
+            }
         }
 
         void OnDisappearing(object? sender, EventArgs e) => Release();

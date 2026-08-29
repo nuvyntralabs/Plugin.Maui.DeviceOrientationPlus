@@ -88,4 +88,9 @@ public interface IDeviceOrientation
     /// Starts platform listeners. Called by <c>UseDeviceOrientationPlus</c>; safe to call more than once.
     /// </summary>
     void Start();
+
+    /// <summary>
+    /// Stops platform listeners and unhooks display events.
+    /// </summary>
+    void Stop();
 }
