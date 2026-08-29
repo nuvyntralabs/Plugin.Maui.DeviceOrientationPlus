@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Plugin.Maui.DeviceOrientationPlus.Sample.MainPage"
+             Title="DeviceOrientationPlus">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+            <Label Text="Lock, unlock, and per-page orientation — more than DeviceDisplay.MainDisplayInfo.Orientation."
+                   FontSize="14" />
+
+            <Label x:Name="StatusLabel" FontFamily="Courier" FontSize="12" />
+            <Label x:Name="DisplayLabel" FontFamily="Courier" FontSize="12" />
+
+            <Label Text="Lock" FontAttributes="Bold" />
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Portrait" Clicked="OnLockPortrait" />
+                <Button Text="Landscape" Clicked="OnLockLandscape" />
+                <Button Text="Unlock" Clicked="OnUnlock" />
+            </HorizontalStackLayout>
+
+            <Label Text="Per-page" FontAttributes="Bold" />
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Video (landscape)" Clicked="OnOpenVideo" />
+                <Button Text="Scanner (portrait)" Clicked="OnOpenScanner" />
+            </HorizontalStackLayout>
+
+            <Label Text="Events" FontAttributes="Bold" />
+            <Label x:Name="LogLabel" FontFamily="Courier" FontSize="12" LineBreakMode="WordWrap" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

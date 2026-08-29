@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:orientation="clr-namespace:Plugin.Maui.DeviceOrientationPlus;assembly=Plugin.Maui.DeviceOrientationPlus"
+             x:Class="Plugin.Maui.DeviceOrientationPlus.Sample.ScannerPage"
+             orientation:Orientation.Preferred="Portrait"
+             Title="Scanner">
+    <VerticalStackLayout Padding="24" Spacing="12" VerticalOptions="Center">
+        <Label Text="Document / vehicle scan"
+               FontSize="22"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center" />
+        <Label Text="This page uses the attached property Orientation.Preferred=Portrait. Leaving the page unlocks."
+               HorizontalTextAlignment="Center" />
+        <BoxView HeightRequest="180" Color="#512BD4" CornerRadius="8" />
+        <Label Text="Camera preview placeholder" HorizontalTextAlignment="Center" />
+    </VerticalStackLayout>
+</ContentPage>

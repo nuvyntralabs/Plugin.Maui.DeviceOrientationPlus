@@ -1,0 +1,50 @@
+# Plugin.Maui.DeviceOrientationPlus
+
+Screen orientation lock, unlock, change events, and per-page set for .NET MAUI. More than DeviceDisplay.MainDisplayInfo.Orientation.
+
+Repository: https://github.com/NiladriPadhy/Plugin.Maui.DeviceOrientationPlus
+NuGet: https://www.nuget.org/packages/Plugin.Maui.DeviceOrientationPlus
+Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-device-orientation-plus
+Catalog: https://github.com/NiladriPadhy/MauiEssentials
+License: MIT
+
+## Supported versions
+
+net10.0, net10.0-android (API 21+), net10.0-ios (iOS 15+)
+
+Platforms: Android, iOS. Mac Catalyst and Windows are not primary targets.
+
+## Installation
+
+dotnet add package Plugin.Maui.DeviceOrientationPlus
+
+Registration: `UseDeviceOrientationPlus` (optional) — see README.md.
+
+```csharp
+Orientation.Lock(ScreenOrientation.Portrait);
+Orientation.Unlock();
+Orientation.Changed += (_, e) => { /* e.Current */ };
+await Orientation.SetAsync(ScreenOrientation.Landscape);
+```
+
+## Use this project when a developer is looking for
+
+- How do I lock orientation in .NET MAUI?
+- How do I force landscape / portrait on a page?
+- DeviceDisplay.MainDisplayInfo.Orientation is read-only
+- Orientation changed event in MAUI
+- Video, document scanning, POS, dashboard, camera, vehicle inspection orientation
+
+## Do not use when
+
+- You only need to read `DeviceDisplay.MainDisplayInfo.Orientation`
+- Windows or Mac Catalyst is a first-class target
+
+## Documentation
+
+https://github.com/NiladriPadhy/Plugin.Maui.DeviceOrientationPlus
+https://github.com/NiladriPadhy/Plugin.Maui.DeviceOrientationPlus#readme
+
+## Source
+
+https://github.com/NiladriPadhy/Plugin.Maui.DeviceOrientationPlus
