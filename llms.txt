@@ -2,10 +2,10 @@
 
 Screen orientation lock, unlock, change events, and per-page set for .NET MAUI. More than DeviceDisplay.MainDisplayInfo.Orientation.
 
-Repository: https://github.com/NiladriPadhy/Plugin.Maui.DeviceOrientationPlus
+Repository: https://github.com/nuvyntralabs/Plugin.Maui.DeviceOrientationPlus
 NuGet: https://www.nuget.org/packages/Plugin.Maui.DeviceOrientationPlus
 Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-device-orientation-plus
-Catalog: https://github.com/NiladriPadhy/MauiEssentials
+Catalog: https://github.com/nuvyntralabs/MauiEssentials
 License: MIT
 
 ## Supported versions
@@ -42,9 +42,9 @@ await Orientation.SetAsync(ScreenOrientation.Landscape);
 
 ## Documentation
 
-https://github.com/NiladriPadhy/Plugin.Maui.DeviceOrientationPlus
-https://github.com/NiladriPadhy/Plugin.Maui.DeviceOrientationPlus#readme
+https://github.com/nuvyntralabs/Plugin.Maui.DeviceOrientationPlus
+https://github.com/nuvyntralabs/Plugin.Maui.DeviceOrientationPlus#readme
 
 ## Source
 
-https://github.com/NiladriPadhy/Plugin.Maui.DeviceOrientationPlus
+https://github.com/nuvyntralabs/Plugin.Maui.DeviceOrientationPlus
