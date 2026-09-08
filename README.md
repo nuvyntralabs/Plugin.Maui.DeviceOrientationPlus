@@ -167,7 +167,7 @@ dotnet build samples/Plugin.Maui.DeviceOrientationPlus.Sample/Plugin.Maui.Device
 dotnet pack src/Plugin.Maui.DeviceOrientationPlus/Plugin.Maui.DeviceOrientationPlus.csproj -c Release -o artifacts
 ```
 
-The `.nupkg` is written to `artifacts/Plugin.Maui.DeviceOrientationPlus.1.0.0.nupkg`.
+The `.nupkg` is written to `artifacts/Plugin.Maui.DeviceOrientationPlus.1.0.4.nupkg`.
 
 ## License
 

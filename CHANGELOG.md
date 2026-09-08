@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+
+- Align the README pack path with the shipped package version.
+
 ## 1.0.0
 
 - Screen orientation control for .NET MAUI on iOS and Android
