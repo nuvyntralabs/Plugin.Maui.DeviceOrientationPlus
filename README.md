@@ -140,7 +140,18 @@ public UIInterfaceOrientationMask GetSupportedInterfaceOrientations(
     => Orientation.SupportedInterfaceOrientations;
 ```
 
-`Info.plist` `UISupportedInterfaceOrientations` must include every orientation you lock to (portrait **and** landscape for a video page).
+No Android `uses-permission` or iOS usage string is required. iOS still needs every lockable orientation listed in `Platforms/iOS/Info.plist`:
+
+```xml
+<key>UISupportedInterfaceOrientations</key>
+<array>
+	<string>UIInterfaceOrientationPortrait</string>
+	<string>UIInterfaceOrientationLandscapeLeft</string>
+	<string>UIInterfaceOrientationLandscapeRight</string>
+</array>
+```
+
+Include portrait **and** landscape when a page locks to landscape (for example a video page).
 
 | | Android | iOS | `net10.0` |
 | --- | --- | --- | --- |
@@ -167,7 +178,7 @@ dotnet build samples/Plugin.Maui.DeviceOrientationPlus.Sample/Plugin.Maui.Device
 dotnet pack src/Plugin.Maui.DeviceOrientationPlus/Plugin.Maui.DeviceOrientationPlus.csproj -c Release -o artifacts
 ```
 
-The `.nupkg` is written to `artifacts/Plugin.Maui.DeviceOrientationPlus.1.0.4.nupkg`.
+The `.nupkg` is written to `artifacts/Plugin.Maui.DeviceOrientationPlus.1.0.5.nupkg`.
 
 ## License
 

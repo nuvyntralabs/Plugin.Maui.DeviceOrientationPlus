@@ -30,7 +30,7 @@
     <PackageProjectUrl>https://nuvyntralabs.github.io/packages/plugin-maui-device-orientation-plus/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/nuvyntralabs/Plugin.Maui.DeviceOrientationPlus</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <PackageReleaseNotes>Align the README pack path with the shipped package version.</PackageReleaseNotes>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
